@@ -5,9 +5,13 @@
 
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--MailChimp-->
+    <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="scripts/jquery.smooth-scroll.min.js"></script>
+    <script src="scripts/crossfade.jquery.js"></script>
+    <script src="scripts/mobile-chrome-vh-fix.js"></script>
     <script src="scripts/main.js"></script>
 </head>
 
@@ -17,8 +21,8 @@
         <div class="fixed">
             <div class="background-image"></div>
             <div class="centered-text">
-                <h1 class="large text-overlay">Carrot</h1>
-                <p class="text-overlay">Presented by Terra Labs</p>
+                <h1 class="text-title text-overlay">Carrot</h1>
+                <p class="text-subtitle text-overlay">Presented by Terra Labs</p>
             </div>
             <div class="arrow bounce">
                 <a class="fa fa-angle-down fa-3x arrow-next" href="#sec2"></a>
@@ -26,32 +30,34 @@
         </div>
     </div>
     <div id="sec2" class="section">
+        <div class="gradient"></div>
         <div class="fixed">
             <div class="background-image"></div>
             <div class="centered-text">
+                <h3 class="text-subtitle text-overlay">Our Device Can Sense the Following</h3>
                 <div id="btns">
                     <div class="btn" onclick="">
                         <div class="btn-blur"></div>
                         <i class="fa fa-tint icon"></i>
-                        <h2>Moisture</h2>
+                        <h2 class="text-body">Moisture</h2>
                         <p></p>
                     </div>
                     <div class="btn" onclick="">
                         <div class="btn-blur"></div>
                         <i class="fa fa-flask icon"></i>
-                        <h2>PH</h2>
+                        <h2 class="text-body">PH</h2>
                         <p></p>
                     </div>
                     <div class="btn" onclick="">
                         <div class="btn-blur"></div>
                         <i class="fa fa-tree icon"></i>
-                        <h2>Nutrients</h2>
+                        <h2 class="text-body">Nutrients</h2>
                         <p></p>
                     </div>
                     <div class="btn" onclick="">
                         <div class="btn-blur"></div>
                         <i class="fa fa-snowflake-o icon"></i>
-                        <h2>Salinity</h2>
+                        <h2 class="text-body">Salinity</h2>
                         <p></p>
                     </div>
                 </div>
@@ -62,16 +68,59 @@
         </div>
     </div>
     <div id="sec3" class="section">
-        <div class="p fixed">animation to plug headphone wire into phone, the wire moves across the screen</div>
+        <div class="p fixed">
+            <div>
+                animation to plug headphone wire into phone, the wire moves across the screen
+            </div>
+            <div class="svg-container">
+                <img class="iphone-svg" src="assets/headphone-jack.svg" />
+                <img class="iphone-svg" src="assets/iphone.svg" />
+            </div>
+        </div>
+        <div class="arrow bounce">
+            <a class="fa fa-angle-down fa-3x arrow-next" href="#sec4"></a>
+        </div>
     </div>
-    <div class="section">
-        <div class="p fixed">team</div>
+    <div id="sec4" class="section">
+        <div class="fixed">
+            <div class="background-image"></div>
+            <div class="centered-text">
+                <h1 class="large text-overlay">Subscribe To Our Mailing List</h1>
+                <div class="email-wrapper">
+                    <form class="email-form validate" action="//terralabs.us15.list-manage.com/subscribe/post?u=2ef22234139e984ec67735269&amp;id=7ec284fcd3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" name="b_2ef22234139e984ec67735269_7ec284fcd3" tabindex="-1" value="" />
+                        </div>
+                        <input class="email-input" type="email" id="email" />
+                        <label class="email-label" id="email-label" for="email">email address</label>
+                        <button class="email-button" id="button" type="submit">OK</button>
+                    </form>
+                </div>
+                <!--
+                <div id="mc_embed_signup">
+                    <form action="//terralabs.us15.list-manage.com/subscribe/post?u=2ef22234139e984ec67735269&amp;id=7ec284fcd3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div id="mc_embed_signup_scroll">
+                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <!--
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2ef22234139e984ec67735269_7ec284fcd3" tabindex="-1" value=""></div>
+                            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                        </div>
+                    </form>
+                </div>
+                -->
+            </div>
+        </div>
+
     </div>
 
     <script>
         $('a').smoothScroll({
             speed: 900,
         });
+
+        initSignup();
+        fixVHChrome();
     </script>
 
 </body>
