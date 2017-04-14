@@ -2,24 +2,22 @@
 
 <head>
     <title>Terra Labs</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <!--MailChimp-->
-    <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+    <link href="assets/favicon-32x32.png" rel="icon" type="image/x-icon" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="scripts/jquery.smooth-scroll.min.js"></script>
     <script src="scripts/crossfade.jquery.js"></script>
     <script src="scripts/mobile-chrome-vh-fix.js"></script>
-    <script src="scripts/main.js"></script>
 </head>
 
 <body>
     <div id="sec1" class="section">
-        <div class="gradient"></div>
         <div class="fixed">
-            <div class="background-image"></div>
+            <div class="background-image clear"></div>
             <div class="centered-text">
                 <h1 class="text-title text-overlay">Carrot</h1>
                 <p class="text-subtitle text-overlay">Presented by Terra Labs</p>
@@ -30,11 +28,10 @@
         </div>
     </div>
     <div id="sec2" class="section">
-        <div class="gradient"></div>
         <div class="fixed">
-            <div class="background-image"></div>
+            <div class="background-image clear"></div>
             <div class="centered-text">
-                <h3 class="text-subtitle text-overlay">Our Device Can Sense the Following</h3>
+                <h3 class="text-subtitle text-overlay text-shadow">Our Device Can Sense the Following</h3>
                 <div id="btns">
                     <div class="btn" onclick="">
                         <div class="btn-blur"></div>
@@ -56,8 +53,8 @@
                     </div>
                     <div class="btn" onclick="">
                         <div class="btn-blur"></div>
-                        <i class="fa fa-snowflake-o icon"></i>
-                        <h2 class="text-body">Salinity</h2>
+                        <i class="fa fa-plus icon"></i>
+                        <h2 class="text-body">And More</h2>
                         <p></p>
                     </div>
                 </div>
@@ -69,12 +66,25 @@
     </div>
     <div id="sec3" class="section">
         <div class="p fixed">
-            <div>
-                animation to plug headphone wire into phone, the wire moves across the screen
-            </div>
-            <div class="svg-container">
-                <img class="iphone-svg" src="assets/headphone-jack.svg" />
-                <img class="iphone-svg" src="assets/iphone.svg" />
+            <div class="background-image clear"></div>
+            <div class="centered-text">
+                <h3 class="text-subtitle text-overlay text-shadow sideways-text">Simply Plug In Your Phone</h3>
+                <div class="svg-container">
+                    <div class="svg-animation slide-left">
+                        <div class="svg svg-headphone">
+                            <img class="sideways" src="/assets/headphone-jack.svg" />
+                            <img class="upright" src="/assets/headphone-jack-upright.svg" />
+                        </div>
+                    </div>
+                    <div class="svg-animation slide-right">
+                        <div class="svg svg-iphone">
+                            <img class="sideways" src="/assets/iphone.svg" />
+                            <img class="upright" src="/assets/iphone-upright.svg" />
+                        </div>
+                    </div>
+                </div>
+                <h3 class="text-subtitle text-overlay text-shadow sideways-text">And Start Sensing</h3>
+                <h3 class="text-subtitle text-overlay text-shadow upright-text">Simply Plug In Your Phone And Start Sensing</h3>
             </div>
         </div>
         <div class="arrow bounce">
@@ -83,40 +93,29 @@
     </div>
     <div id="sec4" class="section">
         <div class="fixed">
-            <div class="background-image"></div>
+            <div class="background-image clear"></div>
             <div class="centered-text">
-                <h1 class="large text-overlay">Subscribe To Our Mailing List</h1>
+                <h1 class="text-title large text-overlay">Subscribe To Our Mailing List</h1>
                 <div class="email-wrapper">
-                    <form class="email-form validate" action="//terralabs.us15.list-manage.com/subscribe/post?u=2ef22234139e984ec67735269&amp;id=7ec284fcd3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                            <input type="text" name="b_2ef22234139e984ec67735269_7ec284fcd3" tabindex="-1" value="" />
-                        </div>
-                        <input class="email-input" type="email" id="email" />
-                        <label class="email-label" id="email-label" for="email">email address</label>
-                        <button class="email-button" id="button" type="submit">OK</button>
+                    <form class="input-form validate" id="name-form" onsubmit="return signUp()">
+                        <input class="input-input" type="text" id="name" />
+                        <label class="input-label" id="name-label" id="name-label" for="name">Name/Organization</label>
+                    </form>
+                    <form class="input-form validate" onsubmit="return signUp()">
+                        <input class="input-input" type="email" id="email" />
+                        <label class=" input-label" id="email-label" id="email-label" for="email">email address</label>
+                        <button class=" input-button" id="email-button">OK</button>
                     </form>
                 </div>
-                <!--
-                <div id="mc_embed_signup">
-                    <form action="//terralabs.us15.list-manage.com/subscribe/post?u=2ef22234139e984ec67735269&amp;id=7ec284fcd3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                        <div id="mc_embed_signup_scroll">
-                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                            <!--
-                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2ef22234139e984ec67735269_7ec284fcd3" tabindex="-1" value=""></div>
-                            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                        </div>
-                    </form>
-                </div>
-                -->
             </div>
         </div>
-
     </div>
+
+    <script src="scripts/main.js"></script>
 
     <script>
         $('a').smoothScroll({
-            speed: 900,
+            speed: 1000,
         });
 
         initSignup();
